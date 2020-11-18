@@ -1,0 +1,15 @@
+service: aws-python-hello
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  pythonHello:
+    handler: handler.endpoint
+    events:
+    - http:
+      path: hello
+      method: get
